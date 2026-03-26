@@ -6,14 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		227ED4E22F6B85E6001708DB /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227ED4E12F6B85E6001708DB /* SpriteKit.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		227ED4CE2F6B844C001708DB /* PetDesk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetDesk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		227ED4CE2F6B844C001708DB /* liveondesk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = liveondesk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		227ED4E12F6B85E6001708DB /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		227ED4D02F6B844C001708DB /* PetDesk */ = {
+		227ED4D02F6B844C001708DB /* liveondesk */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = PetDesk;
+			path = liveondesk;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				227ED4E22F6B85E6001708DB /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,7 +38,8 @@
 		227ED4C52F6B844C001708DB = {
 			isa = PBXGroup;
 			children = (
-				227ED4D02F6B844C001708DB /* PetDesk */,
+				227ED4D02F6B844C001708DB /* liveondesk */,
+				227ED4E02F6B85DA001708DB /* Frameworks */,
 				227ED4CF2F6B844C001708DB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,17 +47,25 @@
 		227ED4CF2F6B844C001708DB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				227ED4CE2F6B844C001708DB /* PetDesk.app */,
+				227ED4CE2F6B844C001708DB /* liveondesk.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		227ED4E02F6B85DA001708DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				227ED4E12F6B85E6001708DB /* SpriteKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		227ED4CD2F6B844C001708DB /* PetDesk */ = {
+		227ED4CD2F6B844C001708DB /* liveondesk */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 227ED4D92F6B844D001708DB /* Build configuration list for PBXNativeTarget "PetDesk" */;
+			buildConfigurationList = 227ED4D92F6B844D001708DB /* Build configuration list for PBXNativeTarget "liveondesk" */;
 			buildPhases = (
 				227ED4CA2F6B844C001708DB /* Sources */,
 				227ED4CB2F6B844C001708DB /* Frameworks */,
@@ -61,13 +76,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				227ED4D02F6B844C001708DB /* PetDesk */,
+				227ED4D02F6B844C001708DB /* liveondesk */,
 			);
-			name = PetDesk;
+			name = liveondesk;
 			packageProductDependencies = (
 			);
-			productName = PetDesk;
-			productReference = 227ED4CE2F6B844C001708DB /* PetDesk.app */;
+			productName = liveondesk;
+			productReference = 227ED4CE2F6B844C001708DB /* liveondesk.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -78,14 +93,14 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2630;
-				LastUpgradeCheck = 2630;
+				LastUpgradeCheck = 2640;
 				TargetAttributes = {
 					227ED4CD2F6B844C001708DB = {
 						CreatedOnToolsVersion = 26.3;
 					};
 				};
 			};
-			buildConfigurationList = 227ED4C92F6B844C001708DB /* Build configuration list for PBXProject "PetDesk" */;
+			buildConfigurationList = 227ED4C92F6B844C001708DB /* Build configuration list for PBXProject "liveondesk" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -99,7 +114,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				227ED4CD2F6B844C001708DB /* PetDesk */,
+				227ED4CD2F6B844C001708DB /* liveondesk */,
 			);
 		};
 /* End PBXProject section */
@@ -159,6 +174,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = L6CB34XQAN;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -184,6 +200,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -223,6 +240,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = L6CB34XQAN;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -241,6 +259,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
@@ -253,19 +272,22 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = L6CB34XQAN;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = liveondesk;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sam.PetDesk;
+				PRODUCT_BUNDLE_IDENTIFIER = sam.liveondesk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -285,19 +307,22 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = L6CB34XQAN;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = liveondesk;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sam.PetDesk;
+				PRODUCT_BUNDLE_IDENTIFIER = sam.liveondesk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -312,7 +337,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		227ED4C92F6B844C001708DB /* Build configuration list for PBXProject "PetDesk" */ = {
+		227ED4C92F6B844C001708DB /* Build configuration list for PBXProject "liveondesk" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				227ED4D72F6B844D001708DB /* Debug */,
@@ -321,7 +346,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		227ED4D92F6B844D001708DB /* Build configuration list for PBXNativeTarget "PetDesk" */ = {
+		227ED4D92F6B844D001708DB /* Build configuration list for PBXNativeTarget "liveondesk" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				227ED4DA2F6B844D001708DB /* Debug */,
