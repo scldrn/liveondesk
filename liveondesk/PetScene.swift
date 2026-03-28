@@ -20,6 +20,7 @@ class PetScene: SKScene, SKPhysicsContactDelegate {
 
     private var petNode: PetNode!
     private let detector = WindowDetector()
+    private let thoughtEngine = ThoughtEngine(petName: "Mascota")
     private var platformNodes: [CGWindowID: SKNode] = [:]
     private var currentPlatforms: [WindowPlatform] = []
 
@@ -446,8 +447,18 @@ class PetScene: SKScene, SKPhysicsContactDelegate {
 
     private func maybeShowThought() {
         guard petNode.childNode(withName: "thought") == nil else { return }
-        guard let phrase = ThoughtProvider.phrase(for: state) else { return }
-        showThought(phrase)
+
+        // Try async engine first (cloud LLM → static fallback)
+        let currentState = state
+        Task { @MainActor [weak self] in
+            guard let self else { return }
+            if let thought = await self.thoughtEngine.generateThought(for: currentState) {
+                self.showThought(thought)
+            } else if let phrase = ThoughtProvider.phrase(for: currentState) {
+                // Engine declined (rate limit, etc.) — use legacy static provider
+                self.showThought(phrase)
+            }
+        }
     }
 
     private func showThought(_ phrase: String) {
